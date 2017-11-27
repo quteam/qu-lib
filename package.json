@@ -1,0 +1,41 @@
+{
+    "name": "qu-lib",
+    "version": "1.0.0",
+    "description": "quteam lib",
+    "main": "dist/index.js",
+    "typings": "dist/index",
+    "typescript": {
+        "definition": "dist/index"
+    },
+    "scripts": {
+        "clean": "rimraf dist",
+        "build": "npm run clean && tsc",
+        "test": "jest"
+    },
+    "keywords": ["typescript", "node"],
+    "author": "haovei@gmail.com",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/jest": "^21.1.8",
+        "jest": "^21.2.1",
+        "rimraf": "^2.6.2",
+        "ts-jest": "^21.2.3",
+        "tslint": "^5.8.0",
+        "typescript": "^2.6.1"
+    },
+    "dependencies": {},
+    "jest": {
+        "moduleFileExtensions": [
+            "ts",
+            "js"
+        ],
+        "transform": {
+            "^.+\\.(ts|tsx)$": "./node_modules/ts-jest/preprocessor.js"
+        },
+        "testMatch": [
+            "**/*.test.(ts|js)"
+        ],
+        "testEnvironment": "node",
+        "browser": true
+    }
+}
