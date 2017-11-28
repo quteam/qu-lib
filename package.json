@@ -4,6 +4,7 @@
     "description": "quteam lib",
     "main": "dist/index.js",
     "module": "es/index.js",
+    "jsnext:main": "es/index.js",
     "typings": "es/index.d.ts",
     "files": [
         "dist",
