@@ -4,7 +4,7 @@
     "description": "quteam lib",
     "main": "dist/index.js",
     "module": "es/index.js",
-    "typings": "dist/index.d.ts",
+    "typings": "es/index.d.ts",
     "files": [
         "dist",
         "es"
