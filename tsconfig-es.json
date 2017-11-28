@@ -1,11 +1,12 @@
 {
     "compilerOptions": {
-        "target": "es5",
+        "target": "ESNEXT",
         "strictNullChecks": true,
+        "moduleResolution": "node",
         "declaration": true,
         "allowSyntheticDefaultImports": true,
         "experimentalDecorators": true,
-        "outDir": "./dist",
+        "outDir": "./es",
         "lib": [
             "dom",
             "esnext"

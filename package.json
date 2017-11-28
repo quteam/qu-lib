@@ -3,13 +3,15 @@
     "version": "1.0.0",
     "description": "quteam lib",
     "main": "dist/index.js",
-    "typings": "dist/index",
-    "typescript": {
-        "definition": "dist/index"
-    },
+    "module": "es/index.js",
+    "typings": "dist/index.d.ts",
+    "files": [
+        "dist",
+        "es"
+    ],
     "scripts": {
-        "clean": "rimraf dist",
-        "build": "npm run clean && tsc",
+        "clean": "rimraf dist && rimraf es",
+        "build": "npm run clean && tsc && tsc -p ./tsconfig-es.json",
         "coverage": "npm test -- --coverage --no-cache",
         "test": "jest"
     },

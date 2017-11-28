@@ -1,2 +1,4 @@
-
-export { default as escape } from './escape';
+export {
+    htmlEscape,
+    htmlUnescape,
+} from './escape';
