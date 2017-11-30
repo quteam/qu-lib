@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`正确的导出模块 1`] = `
+Array [
+  "htmlEscape",
+  "htmlUnescape",
+  "dateToLang",
+]
+`;

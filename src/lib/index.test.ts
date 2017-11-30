@@ -1,7 +1,5 @@
-import {
-    escape,
-} from './';
+import * as libs from './';
 
-test('Index test', () => {
-    expect(escape).not.toBeNull();
+test('正确的导出模块', () => {
+    expect(Object.keys(libs)).toMatchSnapshot();
 });
