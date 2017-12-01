@@ -17,7 +17,7 @@
     },
     "keywords": ["typescript", "qu-lib"],
     "author": "haovei <haovei@gmail.com>",
-    "license": "ISC",
+    "license": "MIT",
     "devDependencies": {
         "@types/jest": "^21.1.8",
         "jest": "^21.2.1",
