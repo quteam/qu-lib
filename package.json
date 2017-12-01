@@ -4,7 +4,6 @@
     "description": "quteam lib",
     "main": "dist/index.js",
     "module": "es/index.js",
-    "jsnext:main": "es/index.js",
     "typings": "es/index.d.ts",
     "files": [
         "dist",
@@ -16,8 +15,8 @@
         "coverage": "npm test -- --coverage --no-cache",
         "test": "jest"
     },
-    "keywords": ["typescript", "node"],
-    "author": "haovei@gmail.com",
+    "keywords": ["typescript", "qu-lib"],
+    "author": "haovei <haovei@gmail.com>",
     "license": "ISC",
     "devDependencies": {
         "@types/jest": "^21.1.8",
