@@ -1,7 +1,7 @@
 {
     "name": "qu-lib",
     "version": "1.0.0",
-    "description": "quteam lib",
+    "description": "Base lib for quteam",
     "main": "dist/index.js",
     "module": "es/index.js",
     "typings": "es/index.d.ts",
@@ -15,7 +15,14 @@
         "coverage": "npm test -- --coverage --no-cache",
         "test": "jest"
     },
-    "keywords": ["typescript", "qu-lib"],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:quteam/qu-lib.git"
+    },
+    "keywords": [
+        "typescript",
+        "qu-lib"
+    ],
     "author": "haovei <haovei@gmail.com>",
     "license": "MIT",
     "devDependencies": {
