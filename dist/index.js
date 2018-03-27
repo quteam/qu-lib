@@ -1,7 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var cookie_1 = require("./cookie");
+exports.cookie = cookie_1.default;
 var escape_1 = require("./escape");
 exports.htmlEscape = escape_1.htmlEscape;
 exports.htmlUnescape = escape_1.htmlUnescape;
 var date_to_lang_1 = require("./date-to-lang");
 exports.dateToLang = date_to_lang_1.default;
+var encrypt_1 = require("./encrypt");
+exports.encode = encrypt_1.encode;
+exports.decode = encrypt_1.decode;
