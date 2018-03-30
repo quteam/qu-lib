@@ -11,7 +11,7 @@ function dateToLang(date) {
     time = (time - date * 1000) / 1000;
     // 存储转换值
     var s;
-    if (time < 60 * 10) {
+    if (time < 60 * 10) { // 十分钟内
         return '刚刚';
     }
     else if ((time < 60 * 60) && (time >= 60 * 10)) {
