@@ -10,3 +10,7 @@ var max_num_1 = require("./max-num");
 exports.maxNum = max_num_1.default;
 var price_1 = require("./price");
 exports.price = price_1.default;
+exports.default = {
+    maxNum: max_num_1.default,
+    price: price_1.default,
+};

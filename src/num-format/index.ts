@@ -11,3 +11,8 @@ export {
     maxNum,
     price,
 };
+
+export default {
+    maxNum,
+    price,
+};

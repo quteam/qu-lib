@@ -9,6 +9,10 @@ describe('导出模块', () => {
             'dateToLang',
             'encode',
             'decode',
+            // numFormat
+            'numFormat',
+            'maxNum',
+            'price',
         ];
         expect(Object.keys(libs)).toEqual(moduleArr);
     });
