@@ -10,3 +10,7 @@ exports.dateToLang = date_to_lang_1.default;
 var encrypt_1 = require("./encrypt");
 exports.encode = encrypt_1.encode;
 exports.decode = encrypt_1.decode;
+var num_format_1 = require("./num-format");
+exports.numFormat = num_format_1.default;
+exports.maxNum = num_format_1.maxNum;
+exports.price = num_format_1.price;

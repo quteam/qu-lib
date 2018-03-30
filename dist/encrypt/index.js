@@ -22,6 +22,7 @@ function encode(str, xor, hex) {
         // 提取字符串每个字符的ascll码
         var charCode = str.charCodeAt(i);
         // 进行异或加密
+        // tslint:disable-next-line:no-bitwise
         charCode = (charCode * 1) ^ xor;
         // 异或加密后的字符转成 hex 位数的字符串
         resultList.push(charCode.toString(hex));
@@ -55,6 +56,7 @@ function decode(str, xor, hex) {
         // 将加密后的每个字符转成加密后的ascll码
         var charCode = parseInt(strCharList[i], hex);
         // 异或解密出原字符的ascll码
+        // tslint:disable-next-line:no-bitwise
         charCode = (charCode * 1) ^ xor;
         var strChar = String.fromCharCode(charCode);
         resultList.push(strChar);

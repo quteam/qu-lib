@@ -1,6 +1,5 @@
 import cookie from './';
 
-
 describe('测试 Cookie', () => {
     const date = new Date(Date.now() + 86400000);
     const cookieContent = `test=test123;path=/;expires=${date.toUTCString()}`;
@@ -9,7 +8,7 @@ describe('测试 Cookie', () => {
     };
     global.window = {
         document,
-    }
+    };
 
     test('Cookie 写入', () => {
         cookie.set('test', 'test123', 1);
