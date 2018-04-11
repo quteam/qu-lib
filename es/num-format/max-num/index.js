@@ -11,11 +11,12 @@
  * @param {number} size 位数，默认 2 位
  * @return {strng} 返回限制的数目
  */
-function maxNum(num, size = 2) {
-    const _maxNum = Math.pow(10, size);
-    let _string = '';
+function maxNum(num, size) {
+    if (size === void 0) { size = 2; }
+    var _maxNum = Math.pow(10, size);
+    var _string = '';
     if (num > _maxNum) {
-        _string = `${_maxNum - 1}+`;
+        _string = _maxNum - 1 + "+";
     }
     else {
         _string = num.toString();

@@ -11,13 +11,15 @@
  * @param {number} size 小数位数，默认小数点后 2 位
  * @return {strng} 格式化后的价格
  */
-function price(money = 0, size = 2) {
-    let tpMoney = '';
+function price(money, size) {
+    if (money === void 0) { money = 0; }
+    if (size === void 0) { size = 2; }
+    var tpMoney = '';
     if (!money || typeof money !== 'number') {
         return (0).toFixed(size);
     }
     tpMoney = money.toFixed(size);
-    const re = /^(-?\d+)(\d{3})(\.?\d*)/;
+    var re = /^(-?\d+)(\d{3})(\.?\d*)/;
     while (re.test(tpMoney)) {
         tpMoney = tpMoney.replace(re, '$1,$2$3');
     }

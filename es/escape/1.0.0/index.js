@@ -6,14 +6,14 @@
  * @param obj
  */
 function invert(obj) {
-    const result = {};
-    const keys = Object.keys(obj);
-    Object.keys(obj).map(one => {
+    var result = {};
+    var keys = Object.keys(obj);
+    Object.keys(obj).map(function (one) {
         result[obj[one]] = one;
     });
     return result;
 }
-const unescapeMap = {
+var unescapeMap = {
     '&#38;': '&',
     '&amp;': '&',
     '&#60;': '<',
@@ -27,30 +27,32 @@ const unescapeMap = {
     '&#39;': '\'',
 };
 // 解密 map
-const unescapeMap2 = invert(unescapeMap);
+var unescapeMap2 = invert(unescapeMap);
 /**
  * HTML 解码
  * @param {string} _str 待解码字符串
  * @returns {string}
  */
-function htmlUnescape(_str = '') {
+function htmlUnescape(_str) {
+    if (_str === void 0) { _str = ''; }
     function escaper(match) {
         return unescapeMap[match];
     }
-    const source = `(?:${Object.keys(unescapeMap).join('|')})`;
-    const replaceRegexp = RegExp(source, 'g');
+    var source = "(?:" + Object.keys(unescapeMap).join('|') + ")";
+    var replaceRegexp = RegExp(source, 'g');
     return _str.replace(replaceRegexp, escaper);
 }
 /**
  * HTML 编码
  * @param _str
  */
-function htmlEscape(_str = '') {
+function htmlEscape(_str) {
+    if (_str === void 0) { _str = ''; }
     function escaper(match) {
         return unescapeMap2[match];
     }
-    const source = `(?:${Object.keys(unescapeMap2).join('|')})`;
-    const replaceRegexp = RegExp(source, 'g');
+    var source = "(?:" + Object.keys(unescapeMap2).join('|') + ")";
+    var replaceRegexp = RegExp(source, 'g');
     return _str.replace(replaceRegexp, escaper);
 }
 export { htmlEscape, htmlUnescape, };
