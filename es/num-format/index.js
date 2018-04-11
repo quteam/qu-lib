@@ -8,6 +8,6 @@ import maxNum from './max-num';
 import price from './price';
 export { maxNum, price, };
 export default {
-    maxNum,
-    price,
+    maxNum: maxNum,
+    price: price,
 };

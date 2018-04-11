@@ -11,9 +11,11 @@
  * @param length 最小补位长度
  * @param char 部位所用字符
  */
-function padStart(value, length = 2, char = '0') {
+function padStart(value, length, char) {
+    if (length === void 0) { length = 2; }
+    if (char === void 0) { char = '0'; }
     value += '';
-    const len = length - value.length;
+    var len = length - value.length;
     if (len <= 0) {
         return value;
     }
@@ -26,22 +28,23 @@ function padStart(value, length = 2, char = '0') {
  * @param format 格式规则
  * @return {strng} 格式化后的时间
  */
-function formatDate(date, format = 'yyyy-MM-dd') {
-    let _date = date;
-    const splitArr = format.split(/(yyyy|MM|dd|HH|mm|ss)+/);
+function formatDate(date, format) {
+    if (format === void 0) { format = 'yyyy-MM-dd'; }
+    var _date = date;
+    var splitArr = format.split(/(yyyy|MM|dd|HH|mm|ss)+/);
     if (!_date) {
         return '';
     }
     if (typeof _date !== 'object') {
         if (typeof _date === 'string') {
-            _date = (`${_date}`).replace(/-/g, '/');
+            _date = ("" + _date).replace(/-/g, '/');
             _date = new Date(_date);
         }
         else {
             _date = new Date(_date * 1000);
         }
     }
-    return splitArr.map(item => {
+    return splitArr.map(function (item) {
         if (item === 'yyyy') {
             return _date.getFullYear();
         }

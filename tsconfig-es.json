@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
-        "target": "ESNEXT",
+        "target": "es5",
+        "module": "es6",
         "strictNullChecks": true,
         "moduleResolution": "node",
         "declaration": true,

@@ -8,23 +8,25 @@
  * @param {number} hex 加密后的进制数
  * @return {strng} 加密后的字符串
  */
-export function encode(str, xor = 312, hex = 25) {
+export function encode(str, xor, hex) {
+    if (xor === void 0) { xor = 312; }
+    if (hex === void 0) { hex = 25; }
     if (typeof str !== 'string' || typeof xor !== 'number' || typeof hex !== 'number') {
         return '';
     }
-    const resultList = [];
+    var resultList = [];
     hex = hex <= 25 ? hex : hex % 25;
-    for (let i = 0; i < str.length; i++) {
+    for (var i = 0; i < str.length; i++) {
         // 提取字符串每个字符的ascll码
-        let charCode = str.charCodeAt(i);
+        var charCode = str.charCodeAt(i);
         // 进行异或加密
         // tslint:disable-next-line:no-bitwise
         charCode = (charCode * 1) ^ xor;
         // 异或加密后的字符转成 hex 位数的字符串
         resultList.push(charCode.toString(hex));
     }
-    const splitStr = String.fromCharCode(hex + 97);
-    const resultStr = resultList.join(splitStr);
+    var splitStr = String.fromCharCode(hex + 97);
+    var resultStr = resultList.join(splitStr);
     return resultStr;
 }
 /**
@@ -34,26 +36,28 @@ export function encode(str, xor = 312, hex = 25) {
  * @param {number} hex 加密后的进制数
  * @return {strng} 加密后的字符串
  */
-export function decode(str, xor = 312, hex = 25) {
+export function decode(str, xor, hex) {
+    if (xor === void 0) { xor = 312; }
+    if (hex === void 0) { hex = 25; }
     if (typeof str !== 'string' || typeof xor !== 'number' || typeof hex !== 'number') {
         return '';
     }
-    let strCharList = [];
-    const resultList = [];
+    var strCharList = [];
+    var resultList = [];
     hex = hex <= 25 ? hex : hex % 25;
     // 解析出分割字符
-    const splitStr = String.fromCharCode(hex + 97);
+    var splitStr = String.fromCharCode(hex + 97);
     // 分割出加密字符串的加密后的每个字符
     strCharList = str.split(splitStr);
-    for (let i = 0; i < strCharList.length; i++) {
+    for (var i = 0; i < strCharList.length; i++) {
         // 将加密后的每个字符转成加密后的ascll码
-        let charCode = parseInt(strCharList[i], hex);
+        var charCode = parseInt(strCharList[i], hex);
         // 异或解密出原字符的ascll码
         // tslint:disable-next-line:no-bitwise
         charCode = (charCode * 1) ^ xor;
-        const strChar = String.fromCharCode(charCode);
+        var strChar = String.fromCharCode(charCode);
         resultList.push(strChar);
     }
-    const resultStr = resultList.join('');
+    var resultStr = resultList.join('');
     return resultStr;
 }

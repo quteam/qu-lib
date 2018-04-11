@@ -1,6 +1,6 @@
 {
     "name": "qu-lib",
-    "version": "1.3.3",
+    "version": "1.3.4",
     "description": "quteam lib",
     "main": "dist/index.js",
     "module": "es/index.js",
