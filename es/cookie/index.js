@@ -1,6 +1,6 @@
 /**
  * Cookie
- * Create cdhaowei1@jd.com  2018-01-29
+ * Create haovei@gmail.com  2018-01-29
  */
 var Cookie = {
     /**
