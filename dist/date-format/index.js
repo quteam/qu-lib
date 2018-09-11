@@ -1,8 +1,8 @@
 "use strict";
 /*
- * @Author: cdhaowei1@jd.com
+ * @Author: haovei@gmail.com
  * @Date: 2018-04-02 10:35:34
- * @Last Modified by: cdhaowei1@jd.com
+ * @Last Modified by: haovei@gmail.com
  * @Last Modified time: 2018-04-02 11:02:43
  */
 Object.defineProperty(exports, "__esModule", { value: true });
